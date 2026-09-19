@@ -1,15 +1,38 @@
-# Monad Blitz Paris Submission Process
+# On-Chain Murder
 
-## Steps to prepare your project repo:
+On-Chain Murder is a blockchain-powered murder mystery game built on Monad Testnet.
 
-1. Visit the `monad-blitz-paris` repo (link [here](https://github.com/monad-developers/monad-blitz-paris)) and fork it.
+Players investigate a crime scene, discover clues, submit a hidden accusation using a commit-reveal mechanism, and reveal their accusation on-chain.
 
-![1.png](./screenshots/1.png)
+The smart contract generates the final solution and determines whether each revealed accusation is correct.
 
-2. Give it your project name, a one-liner description, make sure you are forking `main` branch and click `Create Fork`
+## Live Demo
 
-![2.png](https://github.com/monad-developers/monad-blitz-denver/raw/main/screenshots/2.png?raw=true)
+[Your Vercel URL]
 
-3. In your fork you can make all the changes you want, add code of your project, create branches, add information to `README.md` , you can change anything and everything.
+## Smart Contract
 
-4. For next steps head to [Blitz Portal](https://blitz.devnads.com)
+Monad Testnet:
+0x49E482D7a33a8896335135C44ACaF48bF05c7092
+
+## Tech Stack
+
+- Monad Testnet
+- Solidity
+- Foundry
+- Next.js
+- TypeScript
+- React
+- wagmi
+- viem
+- Tailwind CSS
+
+## Features
+
+- On-chain game creation
+- Investigation phase
+- Clue discovery
+- Commit-reveal accusations
+- On-chain solution generation
+- On-chain accusation verification
+- Monad Testnet integration
