@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { CLUES } from "@/lib/clues";
 import {
   useAccount,
+  useConnect,
   useReadContract,
   useSwitchChain,
   useWaitForTransactionReceipt,
@@ -33,7 +34,7 @@ export default function Home() {
   // --------------------------------------------------
   // CREATE GAME
   // --------------------------------------------------
-
+const { connect, connectors } = useConnect();
   
 const [timeLeft, setTimeLeft] = useState<number | null>(null);
  const [foundClues, setFoundClues] = useState<number[]>([]);
@@ -714,9 +715,18 @@ function findClue(clueId: number) {
           <span className="h-2 w-2 rounded-full bg-emerald-400" />
 
           <span className="max-w-45 truncate font-mono text-xs text-white/60">
-            {mounted && address
-              ? `${address.slice(0, 6)}...${address.slice(-4)}`
-              : "Wallet not connected"}
+           {mounted && address ? (
+  <span className="max-w-45 truncate font-mono text-xs text-white/60">
+    {`${address.slice(0, 6)}...${address.slice(-4)}`}
+  </span>
+) : (
+  <button
+    onClick={() => connect({ connector: connectors[0] })}
+    className="rounded-full bg-white px-4 py-2 text-xs font-medium text-black transition hover:bg-white/80"
+  >
+    Connect Wallet
+  </button>
+)}
           </span>
         </div>
       </header>
