@@ -91,7 +91,7 @@ const {
       functionName: "createGame",
       chainId: 10143,
       args: [
-        BigInt(60),
+        BigInt(3600),
       ],
     });
   }
